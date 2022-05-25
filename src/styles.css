@@ -1,1 +1,33 @@
-/* You can add global styles to this file, and also import other style files */
+.fondo {
+    margin: 0;
+    padding: 0;
+    background-image: url("../src/assets/f01.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.text-format {
+    text-align: start !important;
+}
+
+.titulo {
+    text-transform: capitalize;
+    text-shadow: rgba(17, 15, 15, 0.712);
+    font-weight: bold;
+    color: rgb(45, 154, 114);
+    color: rgba(255, 255, 255, 0.689);
+}
+
+.mt-n1 {
+    margin-top: -0.25rem !important;
+}
+
+.color-section-p {
+    background-color: rgba(153, 174, 177, 0.253);
+}
+
+.bg-vinfo {
+    background-color: #1c5e4cbb;
+    text-shadow: rgba(17, 15, 15, 0.712);
+}

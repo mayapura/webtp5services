@@ -1,0 +1,25 @@
+<header class="sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" [routerLink]="['peliculas']">
+                <img src="../../../../assets/vine-icon.svg" alt="" width="40" height="34" class="d-inline-block align-text-top"> Vimeo
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <ul class="navbar-nav d-flex justify-content-evenly">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" [routerLink]="['peliculas']">Películas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" [routerLink]="['divisas']">Divisas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" [routerLink]="['traductor']">Traductor</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>

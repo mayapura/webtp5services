@@ -1,0 +1,141 @@
+<!--CONTENIDO PINCIPAL-->
+<div class="container row m-auto">
+    <h1 class="col-12 text-center py-3 titulo text-">Cotización de divisas</h1>
+
+    <section class="table-responsive col-lg-8 col-md-8 mt-2 p-2 border border-1 bg-white d-none d-sm-block row">
+        <!--TABLA-->
+        <table class="table text-center">
+            <thead class="border-top border-bottom">
+                <h5 class="bg-danger text-center p-3 text-capitalize fw-bold">Conversor de divisas</h5>
+                <tr>
+                    <th scope="col"></th>
+                    <th scope="col"><img src="../../../assets/unitedstates.png" alt="" width="25" height="25"><br>USD</th>
+                    <th scope="col"><img src="../../../assets/unitedkingdom.png" alt="" width="25" height="25"><br>GBP</th>
+                    <th scope="col"><img src="../../../assets/bitcoin.png" alt="" width="25" height="25"><br>BTC</th>
+                    <th scope="col"><img src="../../../assets/argentina.png" alt="" width="25" height="25"><br>ARG</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td rowspan="2">
+                        <div class="row">
+                            <div class="col-sm-5 m-auto">
+                                <img src="../../../assets/unitedstates.png" class="" alt="" width="25" height="25">
+                            </div>
+                            <div class="col-sm-7 pr-1">1 USD<br>Inverse</div>
+                        </div>
+                    </td>
+                    <td>1.000000</td>
+                    <td>0.919901</td>
+                    <td>0.000140</td>
+                    <td>6.487725</td>
+                </tr>
+                <tr>
+                    <td>1.000000</td>
+                    <td>1.087074</td>
+                    <td>1.113363</td>
+                    <td>0.014179</td>
+                </tr>
+                <tr>
+                    <td rowspan="2">
+                        <div class="row">
+                            <div class="col-sm-5 m-auto">
+                                <img src="../../../assets/unitedkingdom.png" class="" alt="" width="25" height="25">
+                            </div>
+                            <div class="col-sm-7 pr-1">1 USD<br>Inverse</div>
+                        </div>
+                    </td>
+                    <td>1.087074</td>
+                    <td>1.000000</td>
+                    <td>1.344407</td>
+                    <td>0.000140</td>
+                </tr>
+                <tr>
+                    <td>1.113363</td>
+                    <td>1.000000</td>
+                    <td>1.000000</td>
+                    <td>0.919901</td>
+                </tr>
+                <tr>
+                    <td rowspan="2">
+                        <div class="row">
+                            <div class="col-sm-5 m-auto">
+                                <img src="../../../assets/argentina.png" class="" alt="" width="25" height="25">
+                            </div>
+                            <div class="col-sm-7 pr-1">1 USD<br>Inverse</div>
+                        </div>
+                    </td>
+                    <td>1.087074</td>
+                    <td>1.113363</td>
+                    <td>1.000000</td>
+                    <td>6.487725</td>
+                </tr>
+                <tr>
+                    <td>1.344407</td>
+                    <td>0.919901</td>
+                    <td>0.000140</td>
+                    <td>1.087074</td>
+                </tr>
+                <tr>
+                    <td rowspan="2">
+                        <div class="row">
+                            <div class="col-sm-5 m-auto">
+                                <img src="../../../assets/japan.png" class="" alt="" width="25" height="25">
+                            </div>
+                            <div class="col-sm-7 pr-1">1 USD<br>Inverse</div>
+                        </div>
+                    </td>
+                    <td>6.487725</td>
+                    <td>1.113363</td>
+                    <td>0.014179</td>
+                    <td>1.344407</td>
+                </tr>
+                <tr>
+                    <td>0.000140</td>
+                    <td>0.014179</td>
+                    <td>1.344407</td>
+                    <td>1.113363</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!--ASIDE-->
+    <aside class="my-2 col-lg-4 col-md-4 col-sm-12">
+        <div class="row mx-3 p-2 border border-1 justify-content-evenl  bg-white">
+            <h5 class="col-md-12 bg-vinfo py-3 text-center text-white text-capitalize fw-bold">Conversor de divisas</h5>
+            <form class="col-12">
+                <div class="form-group">
+                    <label class="my-2" for="">Cantidad</label><br>
+                    <input type="number" class="form-control my-3" id="cantidad" placeholder="Cantidad">
+                </div>
+                <div class="form-group">
+                    <label for="Divisia">De</label>
+                    <select class="form-control my-3" name="" id="Divisa">
+                  <option value="1" selected>USD Dólares EUU</option>
+                  <option value="2">GRB Libras Esterlinas UK</option>
+                  <option value="3">BTC Bitcoins</option>
+                  <option value="4">ARS Pesos Argentina</option>
+                </select>
+                </div>
+                <div class="form-group">
+                    <label for="Divisia">A</label>
+                    <select class="form-control my-3" name="" id="Divisa">
+                  <option value="1">USD Dólares EUU</option>
+                  <option value="2">GRB Libras Esterlinas UK</option>
+                  <option value="3">BTC Bitcoins</option>
+                  <option value="4" selected>ARS Pesos Argentina</option>
+                </select>
+                </div>
+                <div class="form-group my-3">
+                    <input type="number" class="form-control mt-4" id="cantidad" placeholder="Cantidad">
+                </div>
+                <div class="form-group row mx-1">
+                    <button type="submit" class="btn btn-warning btn-lg btn-block my-2">Convertir &nbsp;<i
+                    class="fas fa-sign-in-alt"></i></button>
+                </div>
+            </form>
+        </div>
+    </aside>
+</div>
+<br><br><br><br><br>
