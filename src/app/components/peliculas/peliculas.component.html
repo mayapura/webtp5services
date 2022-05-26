@@ -4,69 +4,14 @@
     <!--CARDS-->
     <section class="col-sm-6 col-md-8 p-2">
         <div class="row row-cols-1 row-cols-lg-3 row-cols-md-2 g-4">
-            <div class="col">
+            <div id="pelis" class="col" *ngFor="let p of peliculas">
                 <div class="card h-100">
-                    <img src="../../../assets/img01.png" class="card-img-top" alt="Pelicula 01">
+                    <img [src]="p.image" class="card-img-top" alt="...">
                     <div class="card-body">
                         <a href="#" class="text-decoration-none text-reset">
-                            <h5 class="card-title">The Jack in the Box: El despertar</h5>
+                            <h5 class="card-title">{{p.title}}</h5>
                         </a>
-                        <span class="card-text">2019 ‧ Terror ‧ 1h 27m</span>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card h-100">
-                    <img src="../../../assets/img02.png" class="card-img-top" alt="Pelicula 02">
-                    <div class="card-body">
-                        <a href="#" class="text-decoration-none text-reset">
-                            <h5 class="card-title">Mortal Kombat</h5>
-                        </a>
-                        <p class="card-text">1995 ‧ Acción/Aventura ‧ 1h 41m</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card h-100">
-                    <img src="../../../assets/img03.png" class="card-img-top" alt="Pelicula 03">
-                    <div class="card-body">
-                        <a href="#" class="text-decoration-none text-reset">
-                            <h5 class="card-title">Fantastic Beasts and Where to Find Them 3</h5>
-                        </a>
-                        <p class="card-text">2022 ‧ Fantasía/Aventura ‧ 2h 23m</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card h-100">
-                    <img src="../../../assets/img04.png" class="card-img-top" alt="Pelicula 04">
-                    <div class="card-body">
-                        <a href="#" class="text-decoration-none text-reset">
-                            <h5 class="card-title">Sonic 2, la película</h5>
-                        </a>
-                        <p class="card-text">2022 ‧ Aventura/Fantasía ‧ 2h 2m</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card h-100">
-                    <img src="../../../assets/img05.png" class="card-img-top" alt="Pelicula 05">
-                    <div class="card-body">
-                        <a href="#" class="text-decoration-none text-reset">
-                            <h5 class="card-title">Morbius</h5>
-                        </a>
-                        <p class="card-text">2022 ‧ Acción/Aventura ‧ 1h 48m</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card h-100">
-                    <img src="../../../assets/img06.png" class="card-img-top" alt="Pelicula 06">
-                    <div class="card-body">
-                        <a href="#" class="text-decoration-none text-reset">
-                            <h5 class="card-title">The Batman</h5>
-                        </a>
-                        <p class="card-text">2022 ‧ Acción/Aventura ‧ 2h 56m</p>
+                        <span class="card-text">{{p.year}}</span>
                     </div>
                 </div>
             </div>

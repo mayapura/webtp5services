@@ -9,6 +9,8 @@ import { PeliculasComponent } from './components/peliculas/peliculas.component';
 import { DivisasComponent } from './components/divisas/divisas.component';
 import { TraductorComponent } from './components/traductor/traductor.component';
 
+import { HttpClientModule } from '@angular/common/http'
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,11 +18,13 @@ import { TraductorComponent } from './components/traductor/traductor.component';
     FooterComponent,
     PeliculasComponent,
     DivisasComponent,
-    TraductorComponent
+    TraductorComponent,
+    
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
