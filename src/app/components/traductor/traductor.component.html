@@ -6,78 +6,81 @@
         <!--BOTONES DE IDIOMAS-->
         <div class="col-sm-6 col-md-3 my-2">
             <input type="checkbox" class="btn-check" id="btn-italy" checked autocomplete="off">
-            <label class="btn btn-outline-secondary col-12" for="btn-italy"><img src="../../../assets/italy.png" width="20"
-                height="20" alt=""> Italiano</label>
+            <button (click)=" selectOption('sit')" class="btn btn-outline-secondary col-12" for="btn-italy"><img src="../../../assets/italy.png" width="20"
+                height="20" alt=""> Italiano</button>
         </div>
         <div class="col-sm-6 col-md-3 my-2">
             <input type="checkbox" class="btn-check" id="btn-russia" checked autocomplete="off">
-            <label class="btn btn-outline-secondary col-12" for="btn-russia"><img src="../../../assets/russia.png" width="20"
-                height="20" alt=""> Ruso</label>
+            <button (click)=" selectOption('sru')" class="btn btn-outline-secondary col-12" for="btn-russia"><img src="../../../assets/russia.png" width="20"
+                height="20" alt=""> Ruso</button>
         </div>
         <div class="col-sm-6 col-md-3 my-2">
             <input type="checkbox" class="btn-check" id="btn-unitedkindom" checked autocomplete="off">
-            <label class="btn btn-outline-secondary col-12" for="btn-unitedkindom"><img src="../../../assets/unitedkingdom.png"
-                width="20" height="20" alt=""> Ingles</label>
+            <button (click)=" selectOption('sen')" class="btn btn-outline-secondary col-12" for="btn-unitedkindom"><img src="../../../assets/unitedkingdom.png"
+                width="20" height="20" alt=""> Ingles</button>
         </div>
         <div class="col-sm-6 col-md-3 my-2">
             <input type="checkbox" class="btn-check" id="btn-spapin" checked autocomplete="off">
-            <label class="btn btn-outline-secondary col-12" for="btn-spapin"><img src="../../../assets/spain.png" width="20"
-                height="20" alt=""> Español</label>
+            <button (click)=" selectOption('ses')" class="btn btn-outline-secondary col-12" for="btn-spapin"><img src="../../../assets/spain.png" width="20"
+                height="20" alt=""> Español</button>
         </div>
 
         <!---AREA DE TEXTO-->
         <div class="form-floating">
-            <textarea class="form-control" id="floatingTextarea2" style="height: 200px" placeholder="&nbsp;&nbsp;Estoy traduciendo este texto con esta maravillosa app!"></textarea>
-            <label for="floatingTextarea2">&nbsp;&nbsp;Estoy traduciendo este texto con esta maravillosa app!</label>
+            <textarea [(ngModel)]="texto" name="textoatraducir" class="form-control" id="floatingTextarea2" style="height: 200px" placeholder="&nbsp;&nbsp;Estoy traduciendo este texto con esta maravillosa app!"></textarea>
+            <!--             <label for="floatingTextarea2">&nbsp;&nbsp;Estoy traduciendo este texto con esta maravillosa app!</label> -->
         </div>
 
         <!--BOTON TRADUCTOR-->
         <div class="d-grid gap-2 my-1">
-            <button class="btn btn-primary" type="button">Traducir</button>
+            <button (click)="traducir()" class="btn btn-primary" type="button">Traducir</button>
 
         </div>
 
         <!--BOTONES DE IDIOMAS-->
         <div class="col-sm-6 col-md-3 my-2">
             <input type="checkbox" class="btn-check" id="btnitaly" checked autocomplete="off">
-            <label class="btn btn-outline-secondary col-12" for="btnitaly"><img src="../../../assets/italy.png" width="20"
-                height="20" alt=""> Italiano</label>
+            <button (click)="selectOption('tit')" class="btn btn-outline-secondary col-12" for="btnitaly"><img src="../../../assets/italy.png" width="20"
+                height="20" alt=""> Italiano</button >
         </div>
         <div class="col-sm-6 col-md-3 my-2">
             <input type="checkbox" class="btn-check" id="btnrussia" checked autocomplete="off">
-            <label class="btn btn-outline-secondary col-12" for="btnrussia"><img src="../../../assets/russia.png" width="20"
-                height="20" alt=""> Ruso</label>
+            <button (click)="selectOption('tru')" class="btn btn-outline-secondary col-12" for="btnrussia"><img src="../../../assets/russia.png" width="20"
+                height="20" alt=""> Ruso</button >
         </div>
         <div class="col-sm-6 col-md-3 my-2">
             <input type="checkbox" class="btn-check" id="btnunitedkindom" checked autocomplete="off">
-            <label class="btn btn-outline-secondary col-12" for="btnunitedkindom"><img src="../../../assets/unitedkingdom.png"
-                width="20" height="20" alt=""> Ingles</label>
+            <button (click)="selectOption('ten')" class="btn btn-outline-secondary col-12" for="btnunitedkindom"><img src="../../../assets/unitedkingdom.png"
+                width="20" height="20" alt=""> Ingles</button >
         </div>
         <div class="col-sm-6 col-md-3 my-2">
             <input type="checkbox" class="btn-check" id="btnspain" checked autocomplete="off">
-            <label class="btn btn-outline-secondary col-12" for="btnspain"><img src="../../../assets/spain.png" width="20"
-                height="20" alt=""> Español</label>
+            <button (click)="selectOption('tes')" class="btn btn-outline-secondary col-12" for="btnspain"><img src="../../../assets/spain.png" width="20"
+                height="20" alt=""> Español</button >
         </div>
 
         <!---AREA DE TEXTO-->
         <div class="form-floating">
-            <textarea class="form-control" id="floatingTextarea2" style="height: 200px" placeholder="&nbsp;&nbsp;I am traslating this text with this wonderful app!"></textarea>
-            <label for="floatingTextarea2">&nbsp;&nbsp;I am traslating this text with this wonderful app!</label>
+            <textarea name="textotraducido" class="form-control" id="floatingTextarea2" style="height: 200px" placeholder="&nbsp;&nbsp;I am traslating this text with this wonderful app!">{{textoTraducido}}</textarea>
+            <!--             <label for="floatingTextarea2">&nbsp;&nbsp;I am traslating this text with this wonderful app!</label> -->
         </div>
 
         <!--ICONO COPIAR-->
         <div class="col-4 m-auto text-start mt-2">
-            <i class="bi bi-front" style="font-size: 2rem; color: rgba(255, 255, 255, 0.597)"></i>
+            <button class="btn btn-outline-secondary">
+            <i class="bi bi-front" style="font-size: 2rem; color: rgba(255, 255, 255, 0.597)"></i></button>
         </div>
 
         <!--ICONO LIMPIAR-->
         <div class="col-4 m-auto text-center mt-2">
-            <i class="bi bi-stars" style="font-size: 2rem; color: rgba(255, 255, 255, 0.597)"></i>
+            <button (click)="limpiar()" class="btn btn-outline-secondary">
+            <i class="bi bi-stars" style="font-size: 2rem; color: rgba(255, 255, 255, 0.597)"></i></button>
         </div>
 
         <!--ICONO SALIR-->
         <div class="col-4 m-auto text-end mt-2">
-            <i class="bi bi-x-square" style="font-size: 2rem; color: rgba(255, 255, 255, 0.597)"></i>
+            <button class="btn btn-outline-secondary">
+            <i class="bi bi-x-square" style="font-size: 2rem; color: rgba(255, 255, 255, 0.597)"></i></button>
         </div>
     </section>
 

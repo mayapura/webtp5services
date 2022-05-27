@@ -43,7 +43,7 @@ export class PeliculasComponent implements OnInit {
         this.pelicula.title = result.movie.title;
         this.pelicula.year = result.movie.year;
         this.pelicula.genres = result.movie.genres[1];
-        this.pelicula.image = result.movie.images;
+        this.pelicula.image = result.movie.images[0];
         console.log(this.pelicula);
         this.peliculas.push(this.pelicula);
       },
