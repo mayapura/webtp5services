@@ -17,12 +17,12 @@ export class PeliculasComponent implements OnInit {
   cargarPeliculas(): void {
 
     var idPeliculas = [
-      "750283",
-/*       "680139",
-      "854941",
-      "799532",
-      "169639",
-      "462034", */
+      "61e8a4c3f2eb8ced20633f4a",
+       "61e8a4bdf2eb8ced20633f45",
+      "61e8a4bcf2eb8ced20633f43",
+      "61e8a4bbf2eb8ced20633f40",
+      "61e8a4b9f2eb8ced20633f3d",
+      "61e8a4b7f2eb8ced20633f3a",
     ];
     
     for (let id of idPeliculas){
@@ -34,18 +34,12 @@ export class PeliculasComponent implements OnInit {
    getPeliculaId(idPeli: string){
     this.peliculaService.getPelicula(idPeli).subscribe(
       (result) =>{
-        console.log("RESULT: ",result)
-        this.pelicula = new Pelicula();
-
-        console.log(result.movie.id,+", "+result.movie.title,+", "+result.movie.year,+", "+result.movie.genres+", "+result.movie.images);
+        console.log("RESULT: ",result.result)
         
-        this.pelicula.id = result.movie.id;
-        this.pelicula.title = result.movie.title;
-        this.pelicula.year = result.movie.year;
-        this.pelicula.genres = result.movie.genres[1];
-        this.pelicula.image = result.movie.images[0];
-        console.log(this.pelicula);
-        this.peliculas.push(this.pelicula);
+        console.log(result.result._id,+", "+result.result.title,+", "+result.result.year,+", "+result.result.genres[0].name+", "+result.result.image);
+        this.pelicula = new Pelicula(result.result._id, result.result.title,result.result.year,result.result.genres,result.result.image);
+       console.log(this.pelicula);
+         this.peliculas.push(this.pelicula);
       },
       error => {
         alert("Error en la petición")

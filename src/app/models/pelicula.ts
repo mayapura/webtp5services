@@ -1,17 +1,17 @@
 export class Pelicula {
-    id: string;
+    _id: string;
     title: string;
-    year: number;
+    year: string;
     genres: Array<String>;
     image: string;
 
-    constructor (id: string ="", title: string = "", year: number = 0, genres: Array<String> = [], image:string=""
+    constructor (_id: string ="", title: string = "", year: string = " ", genres: Array<String> = [], image:string=""
     ){
-        this.id = id;
+        this._id = _id;
         this.title = title;
         this.year = year;
         this.genres = genres;
         this.image = image;
     }
-
 }
+ 
